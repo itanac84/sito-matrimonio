@@ -1,6 +1,5 @@
 
-
-// Animazione delle sezioni con IntersectionObserver
+// IntersectionObserver per le animazioni delle sezioni
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
