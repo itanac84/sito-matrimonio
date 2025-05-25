@@ -234,9 +234,11 @@ section:nth-child(even) {
   object-fit: contain; /* Garantisce che l'immagine si adatti senza distorcerla */
   display: block;
   margin: 0 auto;
-}/* Nascondi hamburger e menu mobile su desktop */
+}
+
+/* Nascondi hamburger e menu mobile su desktop */
 .hamburger,
-.mobile-menu {
+.mobileMenu {
   display: none;
 }
 
@@ -249,12 +251,22 @@ section:nth-child(even) {
     font-size: 1.5rem;
     cursor: pointer;
     margin: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    color: #c2185b;
   }
 
   .mobileMenu {
     display: none;
     background-color: #fff;
     padding: 1rem;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .mobileMenu.show {
@@ -272,8 +284,13 @@ section:nth-child(even) {
 
   .mobileMenu a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #c2185b;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.2rem;
+  }
+
+  .mobileMenu a:hover {
+    color: #f06292;
   }
 }
 
