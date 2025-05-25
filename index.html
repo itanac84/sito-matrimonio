@@ -3,168 +3,276 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sito ufficiale del matrimonio di Chiara e Andrea, con informazioni su cerimonia, festa, alloggi e suggerimenti per visitare la Puglia.">
-  <meta name="keywords" content="matrimonio, Chiara e Andrea, Torre Santa Susanna, Puglia, cerimonia">
-  <meta name="author" content="Chiara e Andrea">
   <title>Chiara & Andrea</title>
-  <link rel="icon" type="image/png" href="imgs/favicon.png">
   <link rel="stylesheet" href="style.css" />
 </head>
+  
 <body>
-  <!-- Menu Desktop -->
   <nav class="menu">
-    <ul>
-      <li><a href="#benvenuto">Benvenuti</a></li>
-      <li><a href="#cerimonia">La Cerimonia</a></li>
-      <li><a href="#festa">La Festa</a></li>
-      <li><a href="#arrivare">Come raggiungerci</a></li>
-      <li><a href="#hotel">Hotel</a></li>
-      <li><a href="#cibo">Oltre il matrimonio</a></li>
-    </ul>
-  </nav>
+  <ul>
+    <li><a href="#benvenuto">Benvenuti</a></li>
+    <li><a href="#cerimonia">La Cerimonia</a></li>
+    <li><a href="#festa">La Festa</a></li>
+    <li><a href="#arrivare">Come raggiungerci</a></li>
+    <li><a href="#hotel">Hotel</a></li>
+    <li><a href="#cibo">Oltre il matrimonio</a></li>
+  </ul>
+</nav>
+<!-- Pulsante Hamburger -->
+<div class="hamburger" onclick="toggleMobileMenu()" aria-label="Apri/chiudi menu di navigazione" role="button" aria-expanded="false">☰</div>
 
-  <!-- Pulsante Hamburger -->
-  <div class="hamburger" onclick="toggleMobileMenu()" aria-label="Apri/chiudi menu di navigazione" role="button" aria-expanded="false">☰</div>
+<!-- Menu Mobile (inizialmente nascosto) -->
+<nav id="mobileMenu" class="mobileMenu">
+  <ul>
+    <li><a href="#benvenuto">Benvenuti</a></li>
+    <li><a href="#cerimonia">La Cerimonia</a></li>
+    <li><a href="#festa">La Festa</a></li>
+    <li><a href="#arrivare">Come raggiungerci</a></li>
+    <li><a href="#hotel">Hotel</a></li>
+    <li><a href="#cibo">Oltre il matrimonio</a></li>
+  </ul>
+</nav>
+  
 
-  <!-- Menu Mobile -->
-  <nav id="mobileMenu" class="mobileMenu">
-    <ul>
-      <li><a href="#benvenuto">Benvenuti</a></li>
-      <li><a href="#cerimonia">La Cerimonia</a></li>
-      <li><a href="#festa">La Festa</a></li>
-      <li><a href="#arrivare">Come raggiungerci</a></li>
-      <li><a href="#hotel">Hotel</a></li>
-      <li><a href="#cibo">Oltre il matrimonio</a></li>
-    </ul>
-  </nav>
-
-  <!-- Sezione Benvenuti -->
+<section class="intro-saramago">
+  <div class="content">
+    <blockquote>
+      <p>«Il viaggio non finisce mai. Solo i viaggiatori finiscono. E anche loro possono prolungarsi in memoria, in ricordo, in narrazione. Quando il viaggiatore si è seduto sulla sabbia della spiaggia e ha detto "Non c'è altro da vedere", sapeva che non era vero. La fine di un viaggio è solo l'inizio di un altro.</p>
+      <p>Bisogna vedere quel che non si è visto, vedere di nuovo quel che si è già visto, vedere in primavera quel che si era visto in estate, veder di giorno quel che si era visto di notte, con il sole dove prima pioveva, vedere le messi verdi, il frutto maturo, la pietra che ha cambiato posto, l'ombra che non c'era. Bisogna ritornare sui posti già dati, per ripeterli, e per tracciarvi a fianco nuovi cammini.</p>
+      <p>Bisogna ricominciare il viaggio. Sempre.»</p>
+      <footer>José Saramago, "Viaggio in Portogallo"</footer>
+    </blockquote>
+  </div>
+</section>
   <section class="page" id="benvenuto">
     <div class="content">
-      <h1>Chiara & Andrea</h1>
-      <div class="quote">
-        ♥<br>
-        «Il viaggio non finisce mai. Solo i viaggiatori finiscono. E anche loro possono prolungarsi in memoria, in ricordo, in narrazione. Quando il viaggiatore si è seduto sulla sabbia della spiaggia e ha detto "Non c'è altro da vedere", sapeva che non era vero. La fine di un viaggio è solo l'inizio di un altro.<br><br>
-        Bisogna vedere quel che non si è visto, vedere di nuovo quel che si è già visto, vedere in primavera quel che si era visto in estate, veder di giorno quel che si era visto di notte, con il sole dove prima pioveva, vedere le messi verdi, il frutto maturo, la pietra che ha cambiato posto, l'ombra che non c'era. Bisogna ritornare sui posti già dati, per ripeterli, e per tracciarvi a fianco nuovi cammini.<br><br>
-        Bisogna ricominciare il viaggio. Sempre.»<br>
-        — José Saramago<br>
-        ♥
-      </div>
-      <h2>Benvenuti al nostro matrimonio</h2>
-      <p>
-        Questo non è soltanto il sito del nostro matrimonio: è il nostro modo di rendere omaggio a una terra che per Chiara è radice, casa e memoria, e per Andrea è diventata amore, scoperta e nuova appartenenza.<br><br>
-        Due storie diverse, intrecciate dalla stessa luce.
-      </p>
-      <img src="imgs/andchia4.jpg" class="vertical-image" alt="Chiara e Andrea in un momento speciale" />
+      <h1>Benvenuti al nostro matrimonio</h1>
+      <img src="imgs/andchia5.JPG" class="vertical-image" alt="Benvenuti" />
+      <p>Questo non è soltanto il sito del nostro matrimonio: è il nostro modo di rendere omaggio a una terra che per Chiara è radice, casa e memoria, e per Andrea è diventata amore, scoperta e nuova appartenenza. <br>Due storie diverse, intrecciate dalla stessa luce.</p>
     </div>
   </section>
-
-  <!-- Sezione Cerimonia -->
   <section class="page" id="cerimonia">
     <div class="content">
-      <h2>La cerimonia</h2>
+      <h1>La cerimonia</h1>
+     <img src="imgs/chiesamadre2.jpg" alt="La chiesa" />
       <p>La cerimonia si terrà alla Chiesa Madre di Torre Santa Susanna.</p>
-      <img src="imgs/chiesamadre2.jpg" alt="Chiesa Madre di Torre Santa Susanna, luogo della cerimonia" />
     </div>
   </section>
-
-  <!-- Sezione Festa -->
   <section class="page" id="festa">
     <div class="content">
-      <h2>La festa!</h2>
+      <h1>La festa!</h1>
+      <img src="imgs/martuccio2.JPG" alt="La cerimonia" />
       <p>Si terrà in una splendida location circondata dal verde.</p>
-      <img src="imgs/festa.jpg" alt="Location della festa immersa nel verde" />
     </div>
   </section>
-
-  <!-- Sezione Come arrivare -->
+  
   <section class="page" id="arrivare">
+    <div class="content"> 
+       <div class="content">
+          <h2>Come arrivare</h2>     
+   
     <div class="content">
-      <h2>Come arrivare</h2>
-      <p>La casa della sposa si trova <a href="#">qui</a>.</p>
-      <p>La chiesa si trova <a href="#">qui</a>.</p>
-      <p>La location della festa si trova <a href="#">qui</a>.</p>
+     
+        <p>La casa della sposa si trova <a href="https://maps.app.goo.gl/UuD2hWsY4xtWXsS36" target="_blank">qui</a></p> 
+        <p>La chiesa si trova <a href="https://maps.app.goo.gl/yYkHHxJZNSk4NV5w9" target="_blank">qui</a></p> 
+        <p>La location della festa si trova <a href="https://maps.app.goo.gl/tYa2wJa2QekMvdhW9" target="_blank">qui</a></p>
+      
     </div>
-  </section>
-
-  <!-- Sezione Hotel -->
+       
+          
+      </div>
+    </div>
+  </section>  
+  
   <section class="page" id="hotel">
     <div class="content">
       <h2>Alberghi vicino alla sposa</h2>
-      <p>Filobrocante <a href="#">Visita il sito</a></p>
-      <img src="imgs/filobrocante.jpg" alt="Filobrocante, alloggio vicino alla sposa" />
+      <div class="content">
+         <img src="imgs/FIlobrocante.jpeg" alt="Filobrocante" />
+        <p><strong>Filobrocante</strong><br><a href="https://www.booking.com/hotel/it/filobrocante.it.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaHGIAQGYARS4AQfIAQ3YAQHoAQH4AQyIAgGoAgO4As7wuMAGwAIB0gIkNjZlZjk3MjQtNzcwYy00YTY1LTk2ZTgtYTBhNjc1ZTIxNTFh2AIG4AIB&sid=afc15ae3c648bfd2d0cd791b24d679f4&checkin=2025-12-27&checkout=2026-01-02&dest_id=4998178&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1745767656&srpvid=f0df6cb22446007c&type=total&ucfs=1&#no_availability_msg" target="_blank">Visita il sito</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="page">
+    <div class="content">
       <h2>Alberghi vicino alla chiesa (Torre Santa Susanna)</h2>
-      <p>Conti Filo - Hotel Conti Filo <a href="#">Visita il sito</a></p>
-      <img src="imgs/contifilo.jpg" alt="Hotel Conti Filo, vicino alla chiesa" />
-      <h2>Hotel vicino ristorante (Mesagne)</h2>
-      <p>Casa Zaffiro - Casa Zaffiro Mesagne (animali ammessi e 4 camere da letto) <a href="#">Visita il sito</a></p>
-      <img src="imgs/casazaffiro.jpg" alt="Casa Zaffiro, Mesagne" />
-      <p>Casa Bova Francy <a href="#">Visita il sito</a></p>
-      <img src="imgs/casabova.jpg" alt="Casa Bova Francy, Mesagne" />
-      <h2>Altri Hotel vicino ristorante (Mesagne)</h2>
-      <p>Messapia Home <a href="#">Visita il sito</a></p>
-      <img src="imgs/messapiahome.jpg" alt="Messapia Home, Mesagne" />
-      <p>Villa Anastasia Club <a href="#">Visita il sito</a></p>
-      <img src="imgs/villaanastasia.jpg" alt="Villa Anastasia Club, Mesagne" />
-      <h2>Masserie</h2>
-      <p>Tenuta Moreno <a href="#">Visita il sito</a></p>
-      <img src="imgs/tenutamoreno.jpg" alt="Tenuta Moreno, masseria" />
-      <p>Masseria Malvindi <a href="#">Visita il sito</a></p>
-      <img src="imgs/malvindi.jpg" alt="Masseria Malvindi" />
-      <h2>Ancora Masserie...</h2>
-      <p>Masseria Incantalupi <a href="#">Visita il sito</a></p>
-      <img src="imgs/incantalupi.jpg" alt="Masseria Incantalupi" />
-      <p>Masseria Palombara <a href="#">Visita il sito</a></p>
-      <img src="imgs/palombara.jpg" alt="Masseria Palombara" />
+      <div class="content">
+         <img src="imgs/conti_filo.jpeg" alt="Conti Filo" />
+        <p><strong>Hotel Conti Filo</strong><br><a href="https://www.booking.com/hotel/it/castello-conti-filo.it.html?label=gen173nr-1BCAEoggI46AdIM1gEaHGIAQGYARS4AQfIAQ3YAQHoAQGIAgGoAgO4As7wuMAGwAIB0gIkNjZlZjk3MjQtNzcwYy00YTY1LTk2ZTgtYTBhNjc1ZTIxNTFh2AIF4AIB&sid=afc15ae3c648bfd2d0cd791b24d679f4&aid=304142&ucfs=1&checkin=2025-12-27&checkout=2025-12-30&dest_id=0&dest_type=latlong&group_adults=2&no_rooms=1&group_children=0&srpvid=252c6a08c8de1106&srepoch=1745766306&matching_block_id=36891909_88927776_2_34_0&atlas_src=sr_iw_title" target="_blank">Visita il sito</a></p>
+      </div>
     </div>
   </section>
-
-  <!-- Sezione Oltre il matrimonio -->
-  <section class="page" id="cibo">
+   <section class="page">
+     
     <div class="content">
-      <h2>Un po' di suggerimenti per voi</h2>
-      <p>In Puglia il cibo non è solo nutrimento, è un modo di stare insieme, di raccontarsi e di festeggiare. Abbiamo raccolto per voi alcuni suggerimenti su dove gustare piatti tipici, brindare in compagnia o trovare un angolo di Puglia da portare con voi al ritorno. Speriamo vi facciano sentire a casa, come noi ci sentiamo fortunati ad avervi accanto in questi giorni speciali.</p>
-      <h3>Questi sono i nostri ristoranti preferiti a Oria</h3>
-      <p>Osteria Luce - cucina tipica pugliese in chiave moderna <a href="#">Visita il sito</a></p>
-      <img src="imgs/osterialuce.jpg" alt="Osteria Luce, Oria" />
-      <p>Wine shop La Saletta - ottimo soprattutto per un super aperitivo! <a href="#">Visita il sito</a></p>
-      <img src="imgs/lasaletta.jpg" alt="Wine shop La Saletta, Oria" />
-      <h3>Questi sono i nostri ristoranti preferiti a Mesagne</h3>
-      <p>Osteria del leone - cucina tipica pugliese nel cuore di Mesagne <a href="#">Visita il sito</a></p>
-      <img src="imgs/osterialeone.jpg" alt="Osteria del Leone, Mesagne" />
-      <p>Pizzeria Tipo1 - per una pizza gourmet <a href="#">Visita il sito</a></p>
-      <img src="imgs/pizzeriatipo1.jpg" alt="Pizzeria Tipo1, Mesagne" />
-      <h3>Una "figliata" che vale 30km</h3>
-      <p>La Locanda ti li Spilusi nel centro di Brindisi <a href="#">Visita il sito</a></p>
-      <img src="imgs/locandaspilusi.jpg" alt="La Locanda ti li Spilusi, Brindisi" />
-      <h3>I nostri posti del cuore</h3>
-      <p>Pizzeria Da Mimmo - la nostra puccia preferita <a href="#">Visita il sito</a></p>
-      <img src="imgs/pizzeriadamimmo.jpg" alt="Pizzeria Da Mimmo" />
-      <p>La preferita - il panzerotto super <a href="#">Visita il sito</a></p>
-      <img src="imgs/lapreferita.jpg" alt="La Preferita, panzerotto" />
-      <p>Ristorante Conti Filo - una grigliata nel castello <a href="#">Visita il sito</a></p>
-      <img src="imgs/contifilo2.jpg" alt="Ristorante Conti Filo, grigliata" />
-      <h3>Puglia da asporto</h3>
-      <p>Caseificio Pipino a Oria - formaggi pugliesi freschi <a href="#">Visita il sito</a></p>
-      <img src="imgs/pipino.jpg" alt="Caseificio Pipino, Oria" />
-      <p>La pruina a Torre Santa Susanna - tra i migliori produttori di vino pugliese <a href="#">Visita il sito</a></p>
-      <img src="imgs/pruina.jpg" alt="La Pruina, Torre Santa Susanna" />
-      <p>Consorzio produttori vini Manduria - i maestri del Primitivo <a href="#">Visita il sito</a></p>
-      <img src="imgs/manduria.jpg" alt="Consorzio Produttori Vini Manduria" />
+      <h2>Hotel vicino ristorante (Mesagne) </h2>
+      <div class="content">
+         <img src="imgs/Casa%20Zaffiro.jpeg" alt="Casa Zaffiro" />
+        <p><strong>Casa Zaffiro Mesagne (animali ammessi e 4 camere da letto)</strong><br><a href="https://www.airbnb.it/rooms/1252071527768429229?check_in=2025-12-27&check_out=2025-12-30&search_mode=regular_search&source_impression_id=p3_1745766869_P30kjkWF_IvrKg4e&previous_page_section_name=1000&federated_search_id=46e406a2-9b60-4ad6-924b-b67d56cca75e" target="_blank">Visita il sito</a></p>
+      </div>
+      <div class="content">
+        <img src="imgs/casa_bova.jpeg" alt="Casa Bova Francy" />
+        <p><strong>Casa Bova Francy</strong><br><a href="https://www.airbnb.it/rooms/19462402?check_in=2025-12-27&check_out=2025-12-30&search_mode=regular_search&source_impression_id=p3_1745766869_P3YDnwDpK-l1LVSo&previous_page_section_name=1000&federated_search_id=46e406a2-9b60-4ad6-924b-b67d56cca75e" target="_blank">Visita il sito</a></p>
+      </div>
+       
+    
     </div>
   </section>
-
-  <!-- Sezione Galleria (opzionale) -->
-  <section class="page" id="galleria">
+  
+   <section class="page">
+    <div class="content"> 
+       <div class="content">
+          <h2>Altri Hotel vicino ristorante (Mesagne) </h2>
+        <img src="imgs/messapia_home.jpeg" alt="Messapia Home" />
+        <p><strong>Messapia Home</strong><br><a href="https://www.booking.com/hotel/it/messapia-home-mesagne.it.html?label=gen173nr-1BCAEoggI46AdIM1gEaHGIAQGYARS4AQfIAQ3YAQHoAQGIAgGoAgO4As7wuMAGwAIB0gIkNjZlZjk3MjQtNzcwYy00YTY1LTk2ZTgtYTBhNjc1ZTIxNTFh2AIF4AIB&sid=afc15ae3c648bfd2d0cd791b24d679f4&aid=304142&ucfs=1&checkin=2025-12-27&checkout=2025-12-30&dest_id=0&dest_type=latlong&group_adults=2&no_rooms=1&group_children=0&srpvid=252c6a08c8de1106&srepoch=1745767392&matching_block_id=1241884102_396101531_2_0_0_530613&atlas_src=sr_iw_title" target="_blank">Visita il sito</a></p>
+      </div>
+     <div class="content">
+        <img src="imgs/villa_anastasia.jpeg" alt="Villa Anastasia Club" />
+        <p><strong>Villa Anastasia Club</strong><br><a href="https://www.booking.com/hotel/it/villa-anastasia-mesagne.it.html?label=gen173nr-1BCAEoggI46AdIM1gEaHGIAQGYARS4AQfIAQ3YAQHoAQGIAgGoAgO4As7wuMAGwAIB0gIkNjZlZjk3MjQtNzcwYy00YTY1LTk2ZTgtYTBhNjc1ZTIxNTFh2AIF4AIB&sid=afc15ae3c648bfd2d0cd791b24d679f4&aid=304142&ucfs=1&checkin=2025-12-27&checkout=2025-12-30&dest_id=0&dest_type=latlong&group_adults=2&no_rooms=1&group_children=0&srpvid=252c6a08c8de1106&srepoch=1745767392&matching_block_id=167848606_265884397_0_41_0&atlas_src=sr_iw_title" target="_blank">Visita il sito</a></p>
+      </div>
+    
+    </div>
+  </section>
+  
+  <section class="page">
+    <div class="content"> 
+       <div class="content">
+          <h2>Masserie</h2>
+        <img src="imgs/tenuta_moreno.jpeg" alt="Tenuta Moreno" />
+        <p><strong>Tenuta Moreno</strong><br><a href="https://www.booking.com/hotel/it/tenuta-moreno.it.html?aid=311091&label=tenuta-moreno-zxFP9hXkcxqZQqlbqmXQIAS161707164178%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-12039144376%3Alp1008643%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YR10fBTovuitU5KVyXYg8iQ&sid=afc15ae3c648bfd2d0cd791b24d679f4&age=1&all_sr_blocks=29209702_226079338_2_1_0&checkin=2025-12-27&checkout=2026-01-02&dest_id=-121605&dest_type=city&dist=0&group_adults=2&group_children=1&hapos=1&highlighted_blocks=29209702_226079338_2_1_0&hpos=1&matching_block_id=29209702_226079338_2_1_0&no_rooms=1&req_adults=2&req_age=1&req_children=1&room1=A%2CA%2C1&sb_price_type=total&sr_order=popularity&sr_pri_blocks=29209702_226079338_2_1_0__141400&srepoch=1745768641&srpvid=577c6e946dac137d&type=total&ucfs=1&" target="_blank">Visita il sito</a></p>
+      </div>
+     <div class="content">
+        <img src="imgs/malvindi.jpeg" alt="Masseria Malvindi" />
+        <p><strong>Masseria Malvindi</strong><br><a href="https://www.masseriamalvindi.com" target="_blank">Visita il sito</a></p>
+      </div>
+   </div>
+  </section>
+   <section class="page">
+    <div class="content"> 
+       <div class="content">
+          <h2>Ancora Masserie...</h2>     
     <div class="content">
-      <h2>Galleria</h2>
-      <div class="gallery">
-        <img src="imgs/foto1.jpg" alt="Momento speciale del matrimonio" />
-        <img src="imgs/foto2.jpg" alt="Paesaggio pugliese" />
+        <img src="imgs/incantalupi.jpeg" alt="Masseria Incantalupi" />
+        <p><strong>Masseria Incantalupi</strong><br><a href="https://www.incantalupi.it" target="_blank">Visita il sito</a></p>
+    </div>
+      
+       <div class="content">
+        <img src="imgs/palombara.jpeg" alt="Masseria Palombara" />
+        <p><strong>Masseria Palombara</strong><br><a href="https://www.incantalupi.it" target="_blank">Visita il sito</a></p>
+    </div>
+      
       </div>
     </div>
   </section>
 
+
+  <section class="page" id="cibo">
+    <div class="content">
+      <h1>Un po' di suggerimenti per voi</h1>
+       <img src="imgs/salentocibo.jpeg" alt="Mangiare" />
+      <p>In Puglia il cibo non è solo nutrimento, è un modo di stare insieme, di raccontarsi e di festeggiare.
+Abbiamo raccolto per voi alcuni suggerimenti su dove gustare piatti tipici, brindare in compagnia o trovare un angolo di Puglia da portare con voi al ritorno.
+Speriamo vi facciano sentire a casa, come noi ci sentiamo fortunati ad avervi accanto in questi giorni speciali.</p>
+    </div>
+  </section>
+  
+ <section class="page">
+    <div class="content"> 
+       <div class="content">
+          <h2>Questi sono i nostri ristoranti preferiti a Oria</h2>     
+    <div class="content">
+      
+        <p>Osteria Luce - cucina tipica pugliese in chiave moderna<br><a href="https://g.co/kgs/gjy39Vk/" target="_blank">Visita il sito</a></p>
+    
+        <p>Wine shop La Saletta - ottimo soprattutto per un super apritivo!<br><a href="https://g.co/kgs/UUy7zQL" target="_blank">Visita il sito</a></p>
+    </div>
+      
+      </div>
+    </div>
+  </section>
+  
+  
+  
+    <section class="page">
+    <div class="content"> 
+       <div class="content">
+          <h2>Questi sono i nostri ristoranti preferiti a Mesagne</h2>     
+    <div class="content">
+      
+        <p>Osteria del leone - cucina tipica pugliese nel cuore di Mesagne<br><a href="https://g.co/kgs/KZjLEz3" target="_blank">Visita il sito</a></p>
+   
+      
+        <p>Pizzeria Tipo1 - per una pizza gourmet<br><a href="https://g.co/kgs/tuSudbR" target="_blank">Visita il sito</a></p>
+    </div>
+      
+      </div>
+    </div>
+  </section>
+  
+   <section class="page">
+    <div class="content"> 
+       <div class="content">
+          <h2>Una "figliata" che vale 30km</h2>     
+   
+       <div class="content">
+      <img src="imgs/spilusi.jpeg" alt="Li spilusi" />
+        <p>La Locanda ti li Spilusi nel centro di Brindisi<br><a href="https://g.co/kgs/qBBGs99" target="_blank">Visita il sito</a></p>
+    </div>
+      
+      </div>
+    </div>
+  </section>
+
+   <section class="page">
+    <div class="content"> 
+       <div class="content">
+          <h2>I nostri posti del cuore</h2>     
+   
+    <div class="content">
+     
+        <p>Pizzeria Da Mimmo - la nostra puccia preferita<br><a href="https://g.co/kgs/DWmfLMH" target="_blank">Visita il sito</a></p>
+  
+      
+        <p>La preferita - il panzerotto super<br><a href="https://g.co/kgs/21KCR7C" target="_blank">Visita il sito</a></p>
+   
+      
+        <p>Ristorante Conti Filo - una grigliata nel castello<br><a href="https://www.google.com/search?client=safari&rls=en&q=Ristorante+Conti+Filo&ie=UTF-8&oe=UTF-8" target="_blank">Visita il sito</a></p>
+    </div>
+      </div>
+    </div>
+  </section>  
+  
+   <section class="page">
+    <div class="content">
+      <h1>Un po' di suggerimenti per voi</h1>
+      <img src="imgs/casaro.webp" alt="Mangiare" />
+         <p>Se volete portare con voi un po' della magia dei giorni trascorsi insieme, qui trovate qualche idea su cosa mettere in valigia: profumi, gusti e tradizioni della nostra Puglia, da assaporare anche una volta tornati a casa.</p>
+    </div>
+  </section>
+  <section class="page">
+    <div class="content"> 
+       <div class="content">
+          <h2>Puglia da asporto</h2>     
+     
+   
+    <div class="content">
+     
+        <p>Caseificio Pipino a Oria - formaggi pugliesi freschi<br><a href="https://www.google.com/search?client=safari&rls=en&q=Caseificio+Pipino+a+Oria&ie=UTF-8&oe=UTF-8" target="_blank">Visita il sito</a></p>
+ 
+      
+        <p>La pruina a Torre Santa Susanna - tra i migliori produttori di vino pugliese <br><a href="https://g.co/kgs/o9wa11W" target="_blank">Visita il sito</a></p>
+    
+      
+        <p>Consorzio produttori vini Manduria - i maestri del Primitivo<br><a href="https://g.co/kgs/3ib2rsr" target="_blank">Visita il sito</a></p>
+    </div>
+      </div>
+    </div>
+  </section>  
+  
   <script src="./script.js"></script>
+
+ 
+
+
 </body>
 </html>
