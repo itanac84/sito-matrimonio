@@ -6,7 +6,7 @@ body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
-  background: linear-gradient(to bottom, #faebd7, #ffe4e1);
+  background: linear-gradient(to bottom, #fff0f5, #faebd7);
   padding-top: 70px; 
 }
 
