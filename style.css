@@ -272,3 +272,278 @@ section:nth-child(even) {
     font-size: 1rem;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  background: #fff;
+  padding-top: 70px;
+}
+
+.page {
+  position: relative;
+  padding: 2rem;
+  padding-top: 100px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Sezione visibile */
+.page.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ombra sfumata in basso */
+.page::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Se vuoi anche una sfumatura sopra */
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.05));
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.content, .iochiara {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1, .iochiara h1,
+.hotel h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #800000;
+}
+
+.content h2, .iochiara h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #800000;
+}
+
+.content img,
+.iochiara img,
+.hotel img {
+  max-width: 480px;
+  max-height: 360px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.content img:hover,
+.iochiara img:hover,
+.hotel img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.content p, .iochiara p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.hotel {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+section:nth-child(odd) {
+  background: #fff;
+}
+
+section:nth-child(even) {
+  background: #faebd7;
+}
+
+.intro-saramago {
+  background: #f8f8f8;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  font-style: italic;
+}
+
+.intro-saramago .content blockquote {
+  max-width: 800px;
+  font-size: 1.5rem;
+  color: #444;
+  border-left: 4px solid #800000;
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+.intro-saramago footer {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #800000;
+  text-align: right;
+  font-family: 'Lora', serif;
+}
+
+.vertical-image {
+  max-width: 100%;
+  max-height: 600px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(250, 235, 215, 0.9); /* #faebd7 con trasparenza */
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #800000;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #4d0000;
+}
+
+.hamburger,
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 1rem;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    color: #800000;
+  }
+
+  .mobileMenu {
+    display: none;
+    background-color: #fff;
+    padding: 1rem;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobileMenu.show {
+    display: block;
+  }
+
+  .mobileMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobileMenu li {
+    margin: 0.5rem 0;
+  }
+
+  .mobileMenu a {
+    text-decoration: none;
+    color: #800000;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem;
+  }
+
+  .mobileMenu a:hover {
+    color: #4d0000;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .content, .iochiara {
+    padding: 20px 10px;
+  }
+
+  .content h1, .iochiara h1 {
+    font-size: 2.2rem;
+  }
+
+  .content h2, .iochiara h2 {
+    font-size: 1.6rem;
+  }
+
+  .content p, .iochiara p {
+    font-size: 1rem;
+  }
+}
+
