@@ -546,4 +546,27 @@ section:nth-child(even) {
     font-size: 1rem;
   }
 }
+.heart-icon {
+  position: absolute;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #800000;
+  z-index: 10;
+  animation: pulse 4s infinite;
+}
 
+.heart-top-left {
+  top: 1rem;
+  left: 1rem;
+}
+
+.heart-bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .heart-icon {
+    font-size: 1.5rem;
+  }
+}
