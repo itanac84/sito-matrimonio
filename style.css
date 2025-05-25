@@ -6,12 +6,15 @@ body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
-  background: #fff;
+  background: linear-gradient(to bottom, #fff, #faebd7);
   padding-top: 70px;
 }
 
 .page {
-  height: auto;
+  position: relative;
+  padding: 2rem;
+  padding-top: 100px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,36 +22,38 @@ body {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease, transform 1s ease;
-  padding: 2rem;
-  box-sizing: border-box;
-  position: relative;
-  padding-top: 100px;
 }
 
+/* Sezione visibile */
 .page.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.page::before,
+/* Ombra sfumata in basso */
 .page::after {
-  content: "♥";
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  color: #f06292;
+  content: "";
   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05));
+  pointer-events: none;
+  z-index: 1;
 }
 
+/* Se vuoi anche una sfumatura sopra */
 .page::before {
-  top: 1rem;
-  left: 1rem;
-  animation: pulse 4s infinite;
-}
-
-.page::after {
-  bottom: 1rem;
-  right: 1rem;
-  animation: pulse 4s infinite;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.05));
+  pointer-events: none;
+  z-index: 1;
 }
 
 @keyframes pulse {
@@ -133,7 +138,7 @@ section:nth-child(even) {
   max-width: 800px;
   font-size: 1.5rem;
   color: #444;
-  border-left: 4px solid #c2185b;
+  border-left: 4px solid #800000;
   padding-left: 1rem;
   line-height: 1.6;
 }
@@ -141,7 +146,7 @@ section:nth-child(even) {
 .intro-saramago footer {
   margin-top: 1rem;
   font-size: 1.1rem;
-  color: #c2185b;
+  color: #800000;
   text-align: right;
   font-family: 'Lora', serif;
 }
@@ -159,7 +164,7 @@ section:nth-child(even) {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 240, 245, 0.9);
+  background: rgba(250, 235, 215, 0.9); /* #faebd7 con trasparenza */
   display: flex;
   justify-content: center;
   padding: 0.5rem 0;
@@ -178,14 +183,14 @@ section:nth-child(even) {
 
 .menu li a {
   text-decoration: none;
-  color: #c2185b;
+  color: #800000;
   font-family: 'Great Vibes', cursive;
   font-size: 1.2rem;
   transition: color 0.3s;
 }
 
 .menu li a:hover {
-  color: #f06292;
+  color: #4d0000;
 }
 
 .hamburger,
@@ -205,7 +210,7 @@ section:nth-child(even) {
     top: 10px;
     right: 10px;
     z-index: 1000;
-    color: #c2185b;
+    color: #800000;
   }
 
   .mobileMenu {
@@ -236,7 +241,7 @@ section:nth-child(even) {
 
   .mobileMenu a {
     text-decoration: none;
-    color: #c2185b;
+    color: #800000;
     font-family: 'Great Vibes', cursive;
     font-size: 1.2rem;
     display: block;
@@ -244,7 +249,7 @@ section:nth-child(even) {
   }
 
   .mobileMenu a:hover {
-    color: #f06292;
+    color: #4d0000;
   }
 
   .menu {
@@ -266,20 +271,4 @@ section:nth-child(even) {
   .content p, .iochiara p {
     font-size: 1rem;
   }
-}
-
-section {
-  position: relative;
-}
-
-section::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  width: 80%;
-  height: 10px;
-  box-shadow: 0 6px 10px -6px rgba(0, 0, 0, 0.2);
-  z-index: 1;
 }
