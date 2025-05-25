@@ -1,59 +1,249 @@
 
-
-/* Reset di base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 body {
+  margin: 0;
   font-family: 'Georgia', serif;
-  color: #333;
-  line-height: 1.6;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  background: #fff0f5;
+  padding-top: 70px; 
 }
 
-/* Menu Desktop */
+.page {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 100px;
+}
+
+.page.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content {
+  max-width: 900px;  /* Cambiato da 800px a 900px per più spazio */
+  text-align: center;
+  margin: 0 auto;    /* Centra il contenuto */
+  padding: 20px;
+  background-color: #fff; /* Sfondo bianco per il contenuto */
+  border-radius: 8px; /* Angoli arrotondati */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per l'effetto 3D */
+}
+
+.content h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #c2185b;
+}
+
+.content h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #c2185b;
+}
+
+.content img {
+  max-width: 480px;
+  max-height: 360px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.iochiara {
+  max-width: 900px;  /* Cambiato da 800px a 900px per più spazio */
+  text-align: center;
+  margin: 0 auto;    /* Centra il contenuto */
+  padding: 20px;
+  background-color: #fff; /* Sfondo bianco per il contenuto */
+  border-radius: 8px; /* Angoli arrotondati */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per l'effetto 3D */
+}
+
+.iochiara h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #c2185b;
+}
+
+.iochiara h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #c2185b;
+}
+
+.iochiara img {
+  max-width: 480px;
+  max-height: 360px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.iochiara p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.hotel {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hotel h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #c2185b;
+}
+
+.hotel img {
+  max-width: 480px;
+  max-height: 360px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+section:nth-child(odd) {
+  background: #fff;
+}
+
+section:nth-child(even) {
+  background: #ffe4e1;
+}
+
+/* Cuoricini decorativi */
+.page::before {
+  content: "♥";
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #f06292;
+}
+
+.page::after {
+  content: "♥";
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #f06292;
+}
+
 .menu {
-  background-color: #fff;
-  padding: 1rem;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 240, 245, 0.9);
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .menu ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .menu li a {
   text-decoration: none;
   color: #c2185b;
   font-family: 'Great Vibes', cursive;
-  font-size: 1.5rem;
-  transition: color 0.2s ease, transform 0.2s ease;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
-.menu li a:hover, .menu li a:focus {
+.menu li a:hover {
   color: #f06292;
-  transform: scale(1.05);
 }
 
-/* Hamburger e Menu Mobile */
+/* Nuove modifiche per il layout centrato */
+.content {
+  max-width: 900px;
+  margin: 0 auto;  /* Centra il contenuto orizzontalmente */
+  padding: 20px;
+  background-color: #fff; /* Sfondo bianco per il contenuto */
+  border-radius: 8px; /* Angoli arrotondati */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per l'effetto 3D */
+}
+
+/* Aggiungere un po' di padding sopra il contenuto per non farlo coprire dal menu */
+.page {
+  padding-top: 80px; /* Modifica a seconda dell'altezza del menu */
+}
+/* Stile per la sezione introduttiva */
+.intro-saramago {
+  background: #f8f8f8;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  font-style: italic;
+}
+
+.intro-saramago .content blockquote {
+  max-width: 800px;
+  font-size: 1.5rem;
+  color: #444;
+  border-left: 4px solid #c2185b;
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+.intro-saramago footer {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #c2185b;
+  text-align: right;
+  font-family: 'Georgia', serif;
+}
+.vertical-image {
+  max-width: 100%;
+  max-height: 600px; /* Imposta un limite di altezza per evitare immagini troppo alte */
+  height: auto;
+  object-fit: contain; /* Garantisce che l'immagine si adatti senza distorcerla */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Nascondi hamburger e menu mobile su desktop */
 .hamburger,
 .mobileMenu {
   display: none;
 }
 
+/* Mostra hamburger su schermi piccoli */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -63,38 +253,26 @@ body {
     cursor: pointer;
     margin: 1rem;
     position: fixed;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
     z-index: 1000;
     color: #c2185b;
-    transition: transform 0.3s ease;
-  }
-
-  .hamburger[aria-expanded="true"]::before {
-    content: '✕';
-    transform: rotate(90deg);
-    display: inline-block;
   }
 
   .mobileMenu {
     display: none;
     background-color: #fff;
-    padding: 1.5rem;
+    padding: 1rem;
     position: fixed;
     top: 60px;
     left: 0;
     width: 100%;
     z-index: 999;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .mobileMenu.show {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
   }
 
   .mobileMenu ul {
@@ -104,123 +282,32 @@ body {
   }
 
   .mobileMenu li {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
 
   .mobileMenu a {
     text-decoration: none;
     color: #c2185b;
-    font-family: 'Georgia', 'Great Vibes', cursive;
-    font-size: 1.3rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.2rem;
     display: block;
     padding: 0.5rem;
-    transition: color 0.2s ease, transform 0.2s ease;
   }
 
-  .mobileMenu a:hover, .mobileMenu a:focus {
+  .mobileMenu a:hover {
     color: #f06292;
-    transform: scale(1.05);
   }
 
+  /* Nascondi il menu desktop su schermi piccoli */
   .menu {
     display: none;
   }
 }
 
-/* Stili delle sezioni */
-.page {
-  padding: 100px 1rem 2rem;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+/* Mostra il menu mobile quando il bottone hamburger è cliccato */
+.mobileMenu {
+  display: none;
 }
-
-.page.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-h1, h2, h3 {
-  font-family: 'Great Vibes', cursive;
-  color: #c2185b;
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin: 1rem 0;
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-}
-
-p {
-  margin: 1rem 0;
-}
-
-.quote {
-  font-style: italic;
-  color: #555;
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-.content img, .vertical-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin: 1rem auto;
+.mobileMenu.show {
   display: block;
-  object-fit: cover;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-@media (max-width: 768px) {
-  .content img, .vertical-image {
-    max-height: 300px;
-  }
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-/* Galleria */
-.gallery {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.gallery img {
-  max-width: 200px;
-  border-radius: 8px;
-}
-
-/* Accessibilità */
-a:focus, .hamburger:focus {
-  outline: 2px solid #c2185b;
-  outline-offset: 2px;
-}
-
-/* Decorazioni */
-h2::before, h2::after {
-  content: '♥';
-  color: #f06292;
-  margin: 0 0.5rem;
 }
