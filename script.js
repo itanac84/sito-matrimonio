@@ -1,3 +1,4 @@
+// script.js
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -11,3 +12,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.page').forEach(section => {
   observer.observe(section);
 });
+
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('show');
+}
