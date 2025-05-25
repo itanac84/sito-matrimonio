@@ -1,13 +1,12 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Lora', serif;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
-  background: #fff0f5;
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
   padding-top: 70px; 
 }
 
@@ -31,74 +30,75 @@ body {
   transform: translateY(0);
 }
 
-.content {
-  max-width: 900px;  /* Cambiato da 800px a 900px per più spazio */
-  text-align: center;
-  margin: 0 auto;    /* Centra il contenuto */
-  padding: 20px;
-  background-color: #fff; /* Sfondo bianco per il contenuto */
-  border-radius: 8px; /* Angoli arrotondati */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per l'effetto 3D */
+.page::before,
+.page::after {
+  content: "♥";
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #f06292;
+  position: absolute;
 }
 
-.content h1 {
+.page::before {
+  top: 1rem;
+  left: 1rem;
+  animation: pulse 4s infinite;
+}
+
+.page::after {
+  bottom: 1rem;
+  right: 1rem;
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.content, .iochiara {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1, .iochiara h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
   color: #c2185b;
 }
 
-.content h2 {
+.content h2, .iochiara h2 {
   font-family: 'Great Vibes', cursive;
   font-size: 2rem;
   color: #c2185b;
 }
 
-.content img {
+.content img,
+.iochiara img,
+.hotel img {
   max-width: 480px;
   max-height: 360px;
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.content p {
-  font-size: 1.2rem;
-  color: #444;
+.content img:hover,
+.iochiara img:hover,
+.hotel img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
-.iochiara {
-  max-width: 900px;  /* Cambiato da 800px a 900px per più spazio */
-  text-align: center;
-  margin: 0 auto;    /* Centra il contenuto */
-  padding: 20px;
-  background-color: #fff; /* Sfondo bianco per il contenuto */
-  border-radius: 8px; /* Angoli arrotondati */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per l'effetto 3D */
-}
-
-.iochiara h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color: #c2185b;
-}
-
-.iochiara h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  color: #c2185b;
-}
-
-.iochiara img {
-  max-width: 480px;
-  max-height: 360px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.iochiara p {
+.content p, .iochiara p {
   font-size: 1.2rem;
   color: #444;
 }
@@ -114,15 +114,6 @@ body {
   color: #c2185b;
 }
 
-.hotel img {
-  max-width: 480px;
-  max-height: 360px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 section:nth-child(odd) {
   background: #fff;
 }
@@ -131,27 +122,51 @@ section:nth-child(even) {
   background: #ffe4e1;
 }
 
-/* Cuoricini decorativi */
-.page::before {
-  content: "♥";
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  color: #f06292;
+/* Aggiungere un po' di padding sopra il contenuto per non farlo coprire dal menu */
+.page {
+  padding-top: 80px;
 }
 
-.page::after {
-  content: "♥";
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  color: #f06292;
+/* Stile per la sezione introduttiva */
+.intro-saramago {
+  background: #f8f8f8;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  font-style: italic;
 }
 
+.intro-saramago .content blockquote {
+  max-width: 800px;
+  font-size: 1.5rem;
+  color: #444;
+  border-left: 4px solid #c2185b;
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+.intro-saramago footer {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #c2185b;
+  text-align: right;
+  font-family: 'Lora', serif;
+}
+
+.vertical-image {
+  max-width: 100%;
+  max-height: 600px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Menu */
 .menu {
   position: fixed;
   top: 0;
@@ -185,65 +200,12 @@ section:nth-child(even) {
   color: #f06292;
 }
 
-/* Nuove modifiche per il layout centrato */
-.content {
-  max-width: 900px;
-  margin: 0 auto;  /* Centra il contenuto orizzontalmente */
-  padding: 20px;
-  background-color: #fff; /* Sfondo bianco per il contenuto */
-  border-radius: 8px; /* Angoli arrotondati */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per l'effetto 3D */
-}
-
-/* Aggiungere un po' di padding sopra il contenuto per non farlo coprire dal menu */
-.page {
-  padding-top: 80px; /* Modifica a seconda dell'altezza del menu */
-}
-/* Stile per la sezione introduttiva */
-.intro-saramago {
-  background: #f8f8f8;
-  padding: 2rem 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  margin-bottom: 50px;
-  text-align: center;
-  font-style: italic;
-}
-
-.intro-saramago .content blockquote {
-  max-width: 800px;
-  font-size: 1.5rem;
-  color: #444;
-  border-left: 4px solid #c2185b;
-  padding-left: 1rem;
-  line-height: 1.6;
-}
-
-.intro-saramago footer {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: #c2185b;
-  text-align: right;
-  font-family: 'Georgia', serif;
-}
-.vertical-image {
-  max-width: 100%;
-  max-height: 600px; /* Imposta un limite di altezza per evitare immagini troppo alte */
-  height: auto;
-  object-fit: contain; /* Garantisce che l'immagine si adatti senza distorcerla */
-  display: block;
-  margin: 0 auto;
-}
-
-/* Nascondi hamburger e menu mobile su desktop */
+/* Responsive per mobile */
 .hamburger,
 .mobileMenu {
   display: none;
 }
 
-/* Mostra hamburger su schermi piccoli */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -298,16 +260,23 @@ section:nth-child(even) {
     color: #f06292;
   }
 
-  /* Nascondi il menu desktop su schermi piccoli */
   .menu {
     display: none;
   }
-}
 
-/* Mostra il menu mobile quando il bottone hamburger è cliccato */
-.mobileMenu {
-  display: none;
-}
-.mobileMenu.show {
-  display: block;
+  .content, .iochiara {
+    padding: 20px 10px;
+  }
+
+  .content h1, .iochiara h1 {
+    font-size: 2.2rem;
+  }
+
+  .content h2, .iochiara h2 {
+    font-size: 1.6rem;
+  }
+
+  .content p, .iochiara p {
+    font-size: 1rem;
+  }
 }
