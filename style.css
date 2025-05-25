@@ -252,8 +252,8 @@ section:nth-child(even) {
     cursor: pointer;
     margin: 1rem;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     z-index: 1000;
     color: #c2185b;
   }
@@ -264,6 +264,7 @@ section:nth-child(even) {
     padding: 1rem;
     position: fixed;
     top: 60px;
+    left: 0;
     width: 100%;
     z-index: 999;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -276,6 +277,7 @@ section:nth-child(even) {
   .mobileMenu ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
   .mobileMenu li {
@@ -287,22 +289,16 @@ section:nth-child(even) {
     color: #c2185b;
     font-family: 'Great Vibes', cursive;
     font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem;
   }
 
   .mobileMenu a:hover {
     color: #f06292;
   }
-}
 
-/* Nascondi il menu desktop su schermi piccoli */
-@media (max-width: 768px) {
+  /* Nascondi il menu desktop su schermi piccoli */
   .menu {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
-  #mobileMenu {
     display: none;
   }
 }
