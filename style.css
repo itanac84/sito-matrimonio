@@ -7,7 +7,7 @@ body {
   overflow-y: scroll;
   height: 100vh;
   background: linear-gradient(to bottom, #fff0f5, #faebd7);
-  padding-top: 70px; 
+  padding-top: 70px;
 }
 
 .page {
@@ -35,7 +35,7 @@ body {
   content: "♥";
   font-family: 'Great Vibes', cursive;
   font-size: 2rem;
-  color: #faebd7;
+  color: #f06292;
   position: absolute;
 }
 
@@ -67,10 +67,11 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.content h1, .iochiara h1 {
+.content h1, .iochiara h1,
+.hotel h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
-  color: #800000;
+  color: #c2185b;
 }
 
 .content h2, .iochiara h2 {
@@ -108,26 +109,14 @@ body {
   text-align: center;
 }
 
-.hotel h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color: #c2185b;
-}
-
 section:nth-child(odd) {
   background: #fff;
 }
 
 section:nth-child(even) {
-  background: #ffe4e1;
+  background: #faebd7;
 }
 
-/* Aggiungere un po' di padding sopra il contenuto per non farlo coprire dal menu */
-.page {
-  padding-top: 80px;
-}
-
-/* Stile per la sezione introduttiva */
 .intro-saramago {
   background: #f8f8f8;
   padding: 2rem 1.5rem;
@@ -166,7 +155,6 @@ section:nth-child(even) {
   margin: 0 auto;
 }
 
-/* Menu */
 .menu {
   position: fixed;
   top: 0;
@@ -200,7 +188,6 @@ section:nth-child(even) {
   color: #f06292;
 }
 
-/* Responsive per mobile */
 .hamburger,
 .mobileMenu {
   display: none;
@@ -279,4 +266,19 @@ section:nth-child(even) {
   .content p, .iochiara p {
     font-size: 1rem;
   }
+}
+section {
+  position: relative;
+}
+
+section::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 10px;
+  box-shadow: 0 6px 10px -6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
