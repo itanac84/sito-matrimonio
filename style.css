@@ -573,16 +573,17 @@ section:nth-child(even) {
 
 
 .hero-section {
-  background-image: url('/hero-image.jpg'); /* Sostituisci con il percorso della tua immagine */
+  background-image: url('/hero-image.jpg'); /* Percorso assoluto */
   background-size: cover;
   background-position: center;
-  height: 60vh; /* Altezza della sezione, adattabile */
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff; /* Colore del testo bianco per contrasto */
+  color: #ffffff;
   position: relative;
+  width: 100%; /* Garantisce che occupi tutta la larghezza */
 }
 
 .hero-section::before {
@@ -592,20 +593,22 @@ section:nth-child(even) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Overlay scuro per migliorare la leggibilità del testo */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0; /* Assicura che l'overlay sia sotto il testo */
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   padding: 20px;
+  max-width: 90%; /* Limita la larghezza su mobile */
 }
 
 .hero-content h1 {
   font-size: 2.5rem;
-  font-family: 'Georgia', serif; /* Font elegante, personalizzabile */
+  font-family: 'Georgia', serif;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per maggiore leggibilità */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
@@ -616,10 +619,9 @@ section:nth-child(even) {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Media query per responsività */
 @media (max-width: 768px) {
   .hero-section {
-    height: 40vh; /* Altezza ridotta per schermi piccoli */
+    height: 40vh;
   }
 
   .hero-content h1 {
