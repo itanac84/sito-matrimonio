@@ -597,7 +597,7 @@ section:nth-child(even) {
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per leggibilità */
   line-height: 1.4;
-  color: #800000; /* Rosso scuro per il testo */
+  color: #A52A2A; /* Rosso scuro per il testo */
 }
 
 .hero-content .date {
@@ -605,7 +605,7 @@ section:nth-child(even) {
   font-style: italic;
   display: block;
   margin-top: 5px;
-  color: #800000; /* Rosso scuro per la data */
+  color: #A52A2A; /* Rosso scuro per la data */
 }
 
 .hero-content p {
@@ -614,7 +614,7 @@ section:nth-child(even) {
   max-width: 600px;
   margin: 0 auto;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ombra leggera per leggibilità */
-  color: #800000; /* Rosso scuro per il paragrafo, opzionale */
+  color: #A52A2A; /* Rosso scuro per il paragrafo, opzionale */
 }
 
 @media (min-width: 769px) {
