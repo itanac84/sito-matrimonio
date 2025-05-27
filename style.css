@@ -580,7 +580,7 @@ section:nth-child(even) {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #faebd7; /* Beige chiaro come sfondo */
+  background-color: #faebd7 !important; /* Beige chiaro, forzato */
   overflow: hidden;
 }
 
@@ -595,9 +595,9 @@ section:nth-child(even) {
   font-size: 2.5rem;
   font-family: 'Georgia', serif;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per leggibilità */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   line-height: 1.4;
-  color: #A52A2A; /* Rosso scuro per il testo */
+  color: #A52A2A; /* Rosso marrone */
 }
 
 .hero-content .date {
@@ -605,7 +605,7 @@ section:nth-child(even) {
   font-style: italic;
   display: block;
   margin-top: 5px;
-  color: #A52A2A; /* Rosso scuro per la data */
+  color: #A52A2A;
 }
 
 .hero-content p {
@@ -613,13 +613,13 @@ section:nth-child(even) {
   font-style: italic;
   max-width: 600px;
   margin: 0 auto;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ombra leggera per leggibilità */
-  color: #A52A2A; /* Rosso scuro per il paragrafo, opzionale */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #A52A2A;
 }
 
 @media (min-width: 769px) {
   .hero-section {
-    /* Nessun overlay, solo background-color */
+    /* Nessun override */
   }
 }
 
