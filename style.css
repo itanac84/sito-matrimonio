@@ -580,35 +580,13 @@ section:nth-child(even) {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #80000;
+  background-color: #faebd7; /* Beige chiaro come sfondo */
   overflow: hidden;
-}
-
-.hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-}
-
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #faebd7; /* Opacità di default (40%) per mobile */
-  z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   padding: 20px;
   max-width: 90%;
 }
@@ -617,9 +595,9 @@ section:nth-child(even) {
   font-size: 2.5rem;
   font-family: 'Georgia', serif;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera per leggibilità */
   line-height: 1.4;
-  color: #80000;
+  color: #800000; /* Rosso scuro per il testo */
 }
 
 .hero-content .date {
@@ -627,7 +605,7 @@ section:nth-child(even) {
   font-style: italic;
   display: block;
   margin-top: 5px;
-  color: #80000;
+  color: #800000; /* Rosso scuro per la data */
 }
 
 .hero-content p {
@@ -635,19 +613,18 @@ section:nth-child(even) {
   font-style: italic;
   max-width: 600px;
   margin: 0 auto;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  color: #80000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ombra leggera per leggibilità */
+  color: #800000; /* Rosso scuro per il paragrafo, opzionale */
 }
 
 @media (min-width: 769px) {
-  .hero-section::before {
-    background: #faebd7; /* Opacità 60% su desktop */
+  .hero-section {
+    /* Nessun overlay, solo background-color */
   }
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    background: #faebd7; 
     height: 40vh;
   }
 
