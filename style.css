@@ -573,7 +573,7 @@ section:nth-child(even) {
 
 
 .hero-section {
-  background-image: url('imgs/hero-image.jpg'); /* Sostituisci con il percorso della tua immagine */
+  background-image: url('hero-image.jpg'); /* Sostituisci con il percorso della tua immagine */
   background-size: cover;
   background-position: center;
   height: 60vh; /* Altezza della sezione, adattabile */
