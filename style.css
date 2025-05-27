@@ -619,6 +619,7 @@ section:nth-child(even) {
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   line-height: 1.4;
+  color: #80000;
 }
 
 .hero-content .date {
@@ -626,6 +627,7 @@ section:nth-child(even) {
   font-style: italic;
   display: block;
   margin-top: 5px;
+  color: #80000;
 }
 
 .hero-content p {
@@ -634,6 +636,7 @@ section:nth-child(even) {
   max-width: 600px;
   margin: 0 auto;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #80000;
 }
 
 @media (min-width: 769px) {
