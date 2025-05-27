@@ -570,3 +570,63 @@ section:nth-child(even) {
     font-size: 1.5rem;
   }
 }
+
+
+.hero-section {
+  background-image: url('imgs/hero-image.jpg'); /* Sostituisci con il percorso della tua immagine */
+  background-size: cover;
+  background-position: center;
+  height: 60vh; /* Altezza della sezione, adattabile */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* Colore del testo bianco per contrasto */
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Overlay scuro per migliorare la leggibilità del testo */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif; /* Font elegante, personalizzabile */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per maggiore leggibilità */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Media query per responsività */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 40vh; /* Altezza ridotta per schermi piccoli */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
