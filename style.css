@@ -573,7 +573,7 @@ section:nth-child(even) {
 
 
 .hero-section {
-  background-image: url('/hero-image2.jpg'); /* Percorso assoluto rispetto alla root di sito-matrimonio/ */
+  background-image: url('hero-image2.jpg'); /* Percorso relativo */
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -584,7 +584,7 @@ section:nth-child(even) {
   color: #ffffff;
   position: relative;
   width: 100%;
-  background-color: #ff0000; /* Colore di fallback per debug */
+  background-color: #ff0000; /* Colore di fallback */
 }
 
 .hero-section::before {
