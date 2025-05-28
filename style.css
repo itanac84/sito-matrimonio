@@ -601,7 +601,7 @@ section:nth-child(even) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Opacità di default per mobile */
+  background: rgba(0, 0, 0, 0.2); /* Opacità di default per mobile */
   z-index: 1; /* Sopra l'immagine, sotto il testo */
 }
 
@@ -640,7 +640,7 @@ section:nth-child(even) {
 
 @media (min-width: 769px) {
   .hero-section::before {
-    background: rgba(0, 0, 0, 0.6); /* Opacità 60% su desktop */
+    background: rgba(0, 0, 0, 0.3); /* Opacità 60% su desktop */
   }
 }
 
